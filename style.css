@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: url("./static/kawasaki/background.png") no-repeat;
+    border: 1rem solid white;
+}
+
+.title {
+    position: fixed;
+    top: 5vh;
+    /* 1rem for body's border */
+    left: calc(3vw + 1rem);
+    max-width: 60vw;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.7) 1.95px 1.95px 2.6px;
+    font: 1.5rem fantasy;
+    mix-blend-mode: overlay;
+}
+
+
+.seprator{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.seprator hr{
+    flex-grow: 1;
+    color: white;
+    border: solid 1px;
+    height: 1px;
+}
+
+.seprator img{
+    aspect-ratio: 1/1;
+    height: 30px;
+}
+
+.content {
+    position: fixed;
+    bottom: 5vh;
+    /* 1rem for body's border */
+    left: calc(3vw + 1rem);
+    font: 1.5rem fantasy;
+    color: azure;
+    line-height: 3rem;
+}
+
+.content h2{
+    text-shadow: rgba(0, 0, 0, 0.7) 1.95px 1.95px 2.6px;
+    transition: transform 0.2s ease-out;
+}
+
+.content h2:hover{
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+.social_links{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.social_links a{
+    height: 1.75rem;
+    transition: transform 0.2s ease-out;
+}
+
+.social_links a:hover{
+    transform: translateY(-5px);
+}
+
+.social_links img{
+    height: 100%;
+    filter: drop-shadow(1.95px 1.95px 2.6px rgba(0, 0, 0, 0.7));
+}
+
+.content .list{
+    padding-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+    max-width: 50vw;
+    text-shadow: rgba(0, 0, 0, 0.35) 1.95px 1.95px 2.6px;
+}
+
+.pcontainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.pcontainer img {
+    position: absolute;
+    transition: transform 0.5s ease-out;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.pcontainer .background {
+    height: 103vh;
+    width: 103vw;
+}
+
+.footer{
+    position: fixed;
+    bottom: 1rem;
+    right: 1.25rem;
+    font: 0.75rem fantasy;
+    color: white;
+}
+
+.sidebar{
+    height: 100vh;
+    width: 0;
+    box-sizing: content-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+    background-color: rgba(10,10,10,0.75);
+    backdrop-filter: blur(10px);
+    color: white;
+    font: 1.25rem fantasy;
+    transition: width 0.3s ease-in-out;
+    padding-top: 2rem;
+}
+
+.sidebar > *{
+    /* setting alll child instead due to padding prevents sidebar collapse to full 0 */
+    margin: 0 2rem;
+    white-space: nowrap;
+}
+
+.sidebar h2{
+    transition: transform 0.2s ease-out ;
+    line-height: 2.5rem;
+}
+
+.sidebar h2:hover{
+    transform: translateX(5px);
+    cursor: pointer;
+}
+
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
