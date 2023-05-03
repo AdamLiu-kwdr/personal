@@ -20,11 +20,11 @@ function closeMenu(){
 }
 
 function openCharacterMenu(){
-    charMenu.style.width='400px';
+    charMenu.style.width='min(400px,100vw)';
     overlay.style.display = 'block';
 }
 
 function openProjMenu(){
-    projMenu.style.width='400px';
+    projMenu.style.width='min(400px,100vw)';
     overlay.style.display='block';
 }
